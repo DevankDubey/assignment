@@ -18,7 +18,8 @@ const nameInput= document.querySelector('#name');
 const emailInput= document.querySelector('#email');
 const msg= document.querySelector('.msg');
 const userList= document.querySelector('#users');
-myForm.addEventListener('submit',onSubmit);
+
+myForm.addEventListener('submit',onSubmit);    
 function onSubmit(e){
     e.preventDefault();
     if(nameInput.value===''|| emailInput.value==='')
@@ -36,4 +37,6 @@ function onSubmit(e){
     nameInput.value='';
     emailInput.value='';
     }
+    
 }
+
