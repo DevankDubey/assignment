@@ -5,12 +5,18 @@ const emailInput= document.querySelector('#email');
 const msg= document.querySelector('.msg');
 const userList= document.querySelector('#users');
 myForm.addEventListener('submit',savedata);
-function savedata(e){
+function savedata(){
     
     let name=document.getElementById('name').value;
     let email=document.getElementById('email').value;
-        localStorage.setItem('nameInput',name);
-        localStorage.setItem('emailInput',email);
+    let user_records= new Array();
+    user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+    user_records.push({
+        "name":name,
+        "email":email
+})
+    localStorage.setItem("users",JSON.stringify(user_records));
+       
     }
 myForm.addEventListener('submit',onSubmit);    
 function onSubmit(e){
