@@ -15,8 +15,7 @@
                 const name = event.target.username.value;
                 const email = event.target.emailId.value;
                 
-                // localStorage.setItem('name', name);
-                // localStorage.setItem('email', email);
+               
                 
                 const obj = {
                     name,
@@ -63,8 +62,7 @@
               deleteUser(emailId)
 }
 
-            // deleteUser('abc@gmail.com')
-
+            
             function deleteUser(emailId){
                 console.log(emailId)
                 localStorage.removeItem(emailId);
